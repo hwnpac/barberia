@@ -1,0 +1,316 @@
+:root {
+  --bg: #0f172a;
+  --card: #0b1220;
+  --accent: #eab308;
+}
+
+/* ============================
+   RESET + TIPOGRAFÍA
+   ============================ */
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #e7f5ff, #d0ebff, #a5d8ff);
+  color: #1c4e80;
+}
+
+/* ============================
+   HEADER
+   ============================ */
+header.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #4dabf7, #339af0);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #65add7;
+}
+
+/* ============================
+   HERO
+   ============================ */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #a5d8ff, #74c0fc);
+  color: #1c4e80;
+  border-radius: 0 0 40px 40px;
+  box-shadow: inset 0 -5px 20px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ============================
+   BOTONES 3D EN AZUL CLARO
+   ============================ */
+.btn-3d {
+  background: #4dafff !important; /* azul claro */
+  color: white !important;
+  font-weight: bold;
+  padding: 12px 24px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px 0 #1a73e8; /* sombra inferior */
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-3d:hover {
+  background: #6cbcff !important; /* azul más suave */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 #1a73e8;
+}
+
+.btn-3d:active {
+  box-shadow: 0 2px 0 #1a73e8;
+  transform: translateY(3px); /* efecto de hundimiento */
+}
+
+.hero-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ============================
+   SERVICIOS
+   ============================ */
+.services {
+  padding: 2rem;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.services ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.services li {
+  background: #e7f5ff;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,70,150,0.2);
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.services li:hover {
+  transform: translateY(-5px);
+}
+
+/* ============================
+   FORMULARIO DE RESERVAS
+   ============================ */
+.reserve-form {
+  padding: 2rem;
+  text-align: center;
+}
+
+.reserve-form form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #f0f9ff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 70, 150, 0.3);
+}
+
+.reserve-form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.reserve-form input,
+.reserve-form select,
+.reserve-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #90e0ef;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Botón dentro del formulario */
+.reserve-form button {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(145deg, #4dabf7, #339af0);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #1c4e80,
+              0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.reserve-form button:active {
+  box-shadow: 0 3px 0 #1c4e80,
+              0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(3px);
+}
+
+/* ============================
+   LOGIN FORM ESTILO 3D AZUL
+   ============================ */
+#loginForm {
+  max-width: 350px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #e7f5ff;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 70, 150, 0.4),
+              inset 0 2px 6px rgba(255, 255, 255, 0.6);
+  transform: perspective(1000px) rotateX(2deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#loginForm:hover {
+  transform: perspective(1000px) rotateX(0deg);
+  box-shadow: 0 15px 35px rgba(0, 70, 150, 0.6);
+}
+
+#loginForm h2 {
+  text-align: center;
+  color: #1c4e80;
+}
+
+#loginForm label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  color: #1c4e80;
+  font-weight: 600;
+}
+
+#loginForm input {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #90e0ef;
+  outline: none;
+  font-size: 1rem;
+  color: #1c4e80;
+  background: #fff;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#loginForm input:focus {
+  border: 1px solid #4dabf7;
+  box-shadow: 0 0 8px rgba(77, 171, 247, 0.6);
+}
+
+/* Botón con efecto 3D */
+#loginForm button {
+  width: 100%;
+  margin-top: 1.2rem;
+  padding: 0.9rem;
+  background: linear-gradient(145deg, #4dabf7, #339af0);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #1c4e80,
+              0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+#loginForm button:active {
+  box-shadow: 0 3px 0 #1c4e80,
+              0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(3px);
+}
+
+/* ============================
+   MENSAJES DE ERROR
+   ============================ */
+.errors {
+  background: #ffe3e3;
+  border: 1px solid #ff8787;
+  padding: 0.8rem;
+  margin: 1rem auto;
+  border-radius: 10px;
+  color: #c92a2a;
+  max-width: 350px;
+  box-shadow: 0 4px 12px rgba(201, 42, 42, 0.2);
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #339af0;
+  color: white;
+  text-align: center;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+}
+
+footer h2 {
+  margin-bottom: 1rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* ============================
+   RESPONSIVO
+   ============================ */
+@media (max-width: 720px) {
+  header.top {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .services ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
